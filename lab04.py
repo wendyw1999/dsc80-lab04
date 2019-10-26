@@ -93,7 +93,7 @@ def product_name(df):
     """
     
     return pd.pivot_table(df, values = "Total", index = ["Product"], columns = ["Name"] ,aggfunc =
-                          {"Total": np.sum}).fillna(0)
+                          {"Total": np.sum})
 
 
 def count_product(df):
