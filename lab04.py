@@ -134,7 +134,7 @@ def total_by_month(df):
     df =df.replace({"Month":month_dict})
     
     
-    return pd.pivot_table(df, values = "Total", index = ["Name", "Product"], columns = ["Month"] ,aggfunc = "sum").fillna(0)
+    return pd.pivot_table(df, index = ["Name", "Product"], columns = ["Month"] ,aggfunc = {"Total": "sum"}).fillna(0)
 
 # ---------------------------------------------------------------------
 # Question # 4
