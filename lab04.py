@@ -76,7 +76,7 @@ def total_seller(df):
 
     """
     
-    return pd.pivot_table(df, values = "Total", index = ["Name"], aggfunc = "sum").to_frame()
+    return pd.pivot_table(df, values = "Total", index = ["Name"], aggfunc = "sum")
 
 
 def product_name(df):
